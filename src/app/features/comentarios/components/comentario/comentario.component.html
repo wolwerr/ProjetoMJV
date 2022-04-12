@@ -1,1 +1,18 @@
-<p>comentario works!</p>
+<div class="card" *ngIf="comentario && card">
+  <h1>{{ comentario.nome }}</h1>
+  <p>Email: {{ comentario.email }}</p>
+  <p>Comentario: {{ comentario.comentario }}</p>
+  <p>Data inclusao: {{ comentario.inclusionDate | date }}</p>
+  <div class="actions">
+      <a [routerLink]="['/comentario-details', comentario.id]">Detalhes</a>
+      <a class="update" (click)="update()">Atualizar</a>
+  </div>
+</div>
+
+<div class="details" *ngIf="comentario && !card">
+  <h1>Nome: <b>{{ comentario.nome }}</b></h1>
+  <p>Email: {{ comentario.email }}</p>
+  <p>Comentario: {{ comentario.comentario }}</p>
+  <p>Data inclusao: {{ comentario.inclusionDate | date }}</p>
+  <button class="error" (click)="remove()">Remover</button>
+</div>

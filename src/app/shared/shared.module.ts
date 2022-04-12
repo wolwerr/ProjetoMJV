@@ -4,7 +4,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FooterComponent } from './components/footer/footer.component';
 
 
 const components = [
@@ -16,7 +15,6 @@ const components = [
 @NgModule({
   declarations: [
     ...components,
-    FooterComponent,
 
   ],
   imports: [
